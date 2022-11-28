@@ -1,0 +1,22 @@
+.footer {
+  background-color: #F3E3DB;
+  position: fixed;
+  width: 100vw;
+  height: 80px;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 30px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.title{
+  justify-self: center;
+}
+
+.authors{
+  justify-self:flex-end;
+}

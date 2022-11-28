@@ -1,0 +1,73 @@
+.background{
+  position:fixed;
+  background-image: url('/Fondo2.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.container{
+  position: relative;
+  height: 800px;
+  background: transparent;
+  margin-bottom: 100px;
+}
+
+.text_box{
+  background-color: transparent;
+  background-image: url('/Pag2TextoCompleto.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  width: 800px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.bottom{
+  display: flex;
+  justify-content: center;
+}
+
+
+.country_box{
+  background-color: transparent;
+  background-image: url('/Mapa.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 450px;
+  width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+
+.person1_box{
+  background-color: transparent;
+  background-image: url('/Pag2TextoBeatles1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 450px;
+  width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: visible;
+  z-index: 1;
+}
+
+.person2_box{
+  background-color: transparent;
+  background-image: url('/Pag2TextoBeatles2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 450px;
+  width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: visible;
+  z-index: 1;
+}

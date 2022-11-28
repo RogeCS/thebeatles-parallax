@@ -1,0 +1,42 @@
+.section{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 8fr 6fr;
+  place-items: center;
+}
+
+.img_intro{
+  width: 100%;
+}
+
+.right{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 7fr 4fr;
+  place-items: end;
+}
+
+.img_logo{
+  margin-bottom: 50px;
+}
+
+.btn{
+  background-color: #1D1507;
+  width: 400px;
+  height: 80px;
+  justify-self: flex-end;
+  align-self: flex-start;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 100px;
+  transition: 0.2s;
+}
+
+.btn:hover{
+  background-color: #24948C;
+}
+

@@ -1,40 +1,86 @@
 import { useParallax } from "react-scroll-parallax";
 import React, { useRef } from "react";
+import Head from 'next/head'
 import Image from "next/image";
+import Link from 'next/link'
+import {Animated} from "react-animated-css";
+import { motion } from 'framer-motion';
+import styles from '../styles/home.module.css';
 
 const index = () => {
-  const target = useRef(null);
-  const train = useParallax({
-    speed: 500,
-    targetElement: target.current,
-  })
 
-  const cloud = useParallax({
-    speed: 200,
-    targetElement: target.current,
-  })
+  const appear = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
+  const container = {
+    hidden: { opacity: 0, scale: 1 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 2
+      }
+    }
+  };
 
   return (
-    <div ref={target} style={{
-      backgroundImage: "url('/Scene.png')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      width: '3000px'
-    }} className="h-screen">
-      <div className="fixed top-10 left-40">
-        <Image src="/Sun.png" height={120} width={120} />
-      </div>
-      <div ref={train.ref} className="absolute"
+    <div>
+      <Head>
+        <title>Beatlemanía</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"></link>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="h-screen"
         style={{
-          top: '11vh',
-          left: '30vw',
-        }}
+          backgroundImage: "url('/Fondo1.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: '100vw'
+        }} 
       >
-        <Image src="/Train.png" height={350} width={700} />
-      </div>
-      <div ref={cloud.ref} className="absolute top-10">
-        <Image src="/Cloud.png" height={200} width={1000} />
-      </div>
+        <div className={`grid_container ${styles.section}`}>
+          <motion.div 
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className={styles.img_intro}
+          >
+            <Image src='/Intro_texto.png' width="800px" height="600px" />
+          </motion.div>
+          <div className={styles.right}>
+            <div>
+              <motion.div 
+                whileHover={{
+                  y: -50,
+                  transition: { duration: 1 },
+                }}
+                className={styles.img_logo}
+              >
+                <Image src='/Beatles_logo.png' width="800px" height="500px" />
+              </motion.div>
+            </div>
+            <Link href="/scroll">
+              <motion.button 
+                className={styles.btn}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 500, damping: 17 }}
+              >
+                  ¡Vive la Beatlemanía!
+              </motion.button>
+            </Link>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

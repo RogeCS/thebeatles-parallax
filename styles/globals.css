@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.grid_container{
+  display: grid;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.white_space{
+  height: 40vh;
+  width: 100%;
+}
