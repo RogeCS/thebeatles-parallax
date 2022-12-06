@@ -2,11 +2,10 @@ import React, { useRef, useState, useEffect } from "react";
 import { useWindowScrollPositions } from '../hooks/useWindowScrollPositions';
 import { motion } from 'framer-motion';
 import Image from "next/image";
-import ButtonNext from "../components/buttonNext";
 import ButtonBack from "../components/buttonBack";
 
 
-import styles from '../styles/scroll.module.css';
+import styles from '../styles/scroll2.module.css';
 
 const scroll = () => {
   const left = {
@@ -23,13 +22,13 @@ const scroll = () => {
     }
   }
 
-  const left2 = {
+  const down = {
     offscreen: {
-      x: -800,
+      y: -800,
       opacity: 0
     },
     onscreen: {
-      x: 0,
+      y: 0,
       opacity: 1
     },
     transition: {
@@ -65,30 +64,24 @@ const scroll = () => {
           viewport={{once:false, amount: 0.8}}
           transition={{staggerChildren: 0.5}}
         >
-          <motion.div
-            className={styles.text_box}
-            variants={left}
-          >
-          </motion.div>
-          <div className={styles.bottom}>
-            <motion.div 
-              className={styles.country_box}
-              variants={left2}/>
+          <div className={styles.left}>
+            <motion.div
+              className={styles.text_box}
+              variants={down}
+            >
+            </motion.div>
+          </div>
+          <div className={styles.right}>
             <motion.div 
               className={styles.person1_box}
               variants={up}
             />
-            <motion.div 
-              className={styles.person2_box}
-              variants={up}
-            />
-              
           </div>
         </motion.div>
         <div className="white_space" />
-      </div>
-      <div className="buttons">
-        <ButtonNext to="/scroll2"></ButtonNext>
+        <div className="buttons">
+          <ButtonBack to="/scroll"></ButtonBack>
+        </div>
       </div>
     </div>
 

@@ -1,0 +1,43 @@
+.background{
+  position:fixed;
+  background-image: url('/Fondo3.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.container{
+  position: relative;
+  height: 800px;
+  background: transparent;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text_box{
+  background-color: transparent;
+  background-image: url('/Pag3Texto.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 380px;
+  width: 430px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.person1_box{
+  background-color: transparent;
+  background-image: url('/Pag3PleasePleaseMe.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+  width: 540px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: visible;
+  z-index: 1;
+}

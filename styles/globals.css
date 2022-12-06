@@ -5,11 +5,19 @@
 
 .grid_container{
   display: grid;
-  max-width: 1600px;
+  max-width: 1080px;
   margin: auto;
 }
 
 .white_space{
-  height: 40vh;
+  height: 30vh;
   width: 100%;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 100px;
 }

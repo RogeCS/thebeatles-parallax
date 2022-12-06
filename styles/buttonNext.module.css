@@ -1,0 +1,16 @@
+.btn_next{
+  width: 100px;
+  color: white;
+  z-index: 1;
+  height: 100px;
+  background-color: #1D1507;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.btn_next:hover{
+  background-color: #24948C;
+}
