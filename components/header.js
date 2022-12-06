@@ -1,11 +1,14 @@
 import React from 'react'
+import Link from 'next/link';
 import styles from "../styles/header.module.css"
 import { HiMenu } from 'react-icons/hi' 
 
 
 const Header = () => (
   <header className={styles.header}>
-    <HiMenu size={60} />
+    <Link href="/">
+      <h1>Inicio</h1>
+    </Link>
   </header>
 )
 

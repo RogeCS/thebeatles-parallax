@@ -57,6 +57,7 @@ const scroll = () => {
 
       </div>
       <div className="grid_container">
+        <p className="scroll-text">Scroll</p>
         <div className="white_space" />
         <motion.div 
           className={styles.container}
